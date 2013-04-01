@@ -173,12 +173,9 @@ namespace ReactiveUI
             Contract.Requires(source != null);
             Contract.Requires(selector != null);
 
-            if (filter == null)
-                filter = x => true;
-
             this.source = source;
             this.selector = selector;
-            this.filter = filter;
+            this.filter = filter ?? defaultFilter;
             this.orderer = orderer;
             this.signalReset = signalReset;
 
@@ -188,6 +185,8 @@ namespace ReactiveUI
             this.Reset();
             this.wireUpChangeNotifications();
         }
+
+        private static bool defaultFilter(TSource arg) { return true; }
 
         private void wireUpChangeNotifications()
         {
