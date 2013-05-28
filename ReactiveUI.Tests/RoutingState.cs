@@ -24,7 +24,7 @@ namespace ReactiveUI.Routing.Tests
         }
     }
 
-    public class RoutingStateTests
+    public class RoutingStateTests : IDisposable
     {
         [Fact]
         public void NavigationPushPopTest()
@@ -51,6 +51,11 @@ namespace ReactiveUI.Routing.Tests
             fixture.NavigateBack.Execute(null);
 
             Assert.Equal(1, fixture.NavigationStack.Count);
+        }
+
+        public void Dispose()
+        {
+            RxApp.ResetServiceLocator();
         }
     }
 }

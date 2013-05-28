@@ -370,6 +370,13 @@ namespace ReactiveUI
             return _getService != null && _getAllServices != null;
         }
 
+        public static void ResetServiceLocator()
+        {
+            _getService = null;
+            _getAllServices = null;
+            _register = null;
+        }
+
         static IEnumerable<string> attemptToEarlyLoadReactiveUIDLLs()
         {
             var guiLibs = new[] {

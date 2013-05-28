@@ -127,7 +127,7 @@ namespace ReactiveUI.Tests
             DependencyProperty.Register("NullHatingString", typeof(string), typeof(PropertyBindFakeControl), new PropertyMetadata(""));
     }
 
-    public class PropertyBindingTest
+    public class PropertyBindingTest : IDisposable
     {
         [Fact]
         public void TwoWayBindSmokeTest()
@@ -380,6 +380,11 @@ namespace ReactiveUI.Tests
                     if (!types.ContainsKey(tuple)) types[tuple] = new List<Type>();
                     types[tuple].Add(c);
                 });
+        }
+
+        public void Dispose()
+        {
+            RxApp.ResetServiceLocator();
         }
     }
 }

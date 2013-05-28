@@ -59,7 +59,7 @@ namespace ReactiveUI.Routing.Tests
     using Foobar.Views;
     using Foobar.ViewModels;
 
-    public class RxRoutingTests : IEnableLogger
+    public class RxRoutingTests : IEnableLogger, IDisposable
     {
         [Fact]
         public void ResolveExplicitViewType()
@@ -89,6 +89,11 @@ namespace ReactiveUI.Routing.Tests
             var result = RxRouting.ResolveView(vm);
             this.Log().Info(result.GetType().FullName);
             Assert.True(result is FooBarView);
+        }
+
+        public void Dispose()
+        {
+            RxApp.ResetServiceLocator();
         }
     }
 }
