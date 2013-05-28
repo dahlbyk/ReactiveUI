@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ReactiveUI.Tests</RootNamespace>
     <AssemblyName>ReactiveUI.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SccProjectName>
@@ -133,25 +133,25 @@
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReactiveUI.NLog\ReactiveUI.NLog_Net45.csproj">
+    <ProjectReference Include="..\ReactiveUI.NLog\ReactiveUI.NLog.csproj">
       <Project>{08d3606b-ee79-43ee-8382-72a1091f1f30}</Project>
-      <Name>ReactiveUI.NLog_Net45</Name>
+      <Name>ReactiveUI.NLog</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReactiveUI.Routing\ReactiveUI.Routing_Net45.csproj">
+    <ProjectReference Include="..\ReactiveUI.Routing\ReactiveUI.Routing.csproj">
       <Project>{1b7576e0-f1b6-41a7-b607-b521dea1daa9}</Project>
-      <Name>ReactiveUI.Routing_Net45</Name>
+      <Name>ReactiveUI.Routing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReactiveUI.Testing\ReactiveUI.Testing_Net45.csproj">
+    <ProjectReference Include="..\ReactiveUI.Testing\ReactiveUI.Testing.csproj">
       <Project>{dd99fd0f-82f6-4c30-930e-4a1d0df01d65}</Project>
-      <Name>ReactiveUI.Testing_Net45</Name>
+      <Name>ReactiveUI.Testing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReactiveUI.Xaml\ReactiveUI.Xaml_Net45.csproj">
+    <ProjectReference Include="..\ReactiveUI.Xaml\ReactiveUI.Xaml.csproj">
       <Project>{1ce2d235-8072-4649-ba5a-cfb1af8776e0}</Project>
-      <Name>ReactiveUI.Xaml_Net45</Name>
+      <Name>ReactiveUI.Xaml</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReactiveUI\ReactiveUI_Net45.csproj">
+    <ProjectReference Include="..\ReactiveUI\ReactiveUI.csproj">
       <Project>{b2c721d6-bf0c-410a-b374-1df417b34b30}</Project>
-      <Name>ReactiveUI_Net45</Name>
+      <Name>ReactiveUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
